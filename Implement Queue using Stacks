@@ -1,0 +1,52 @@
+======================My Code=================
+//Using Stack
+class MyQueue {
+	Stack<Integer> stack = new Stack<Integer>();
+    // Push element x to the back of queue.
+    public void push(int x) {
+        stack.push(x);
+    }
+
+    // Removes the element from in front of queue.
+    public void pop() {
+        stack.remove(0);
+    }
+
+    // Get the front element.
+    public int peek() {
+        if(stack.isEmpty()){
+          return -1;
+        }else
+          return stack.get(0);
+    }
+
+    // Return whether the queue is empty.
+    public boolean empty() {
+        return stack.isEmpty();
+    }
+}
+
+=======================================
+//Using LinkedList
+class MyQueue {
+    private LinkedList<Integer> ll=new LinkedList<Integer>();
+   
+    public void push(int o){
+        ll.addLast(o);
+    }
+    
+    public Object pop(){
+        return ll.removeFirst();
+    }
+ 
+    public int peek() {
+        if(ll.isEmpty()){
+          return -1;
+        }else
+          return ll.get(0);
+    }
+    
+    public boolean empty(){
+        return ll.isEmpty();
+    }
+}
